@@ -403,3 +403,510 @@ header {
         transform: translateX(-50%);
     }
 }
+
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Section Styling */
+  .mission-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .section-titl{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-titl::before,
+  .section-titl::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .section-titl::before {
+    left: -70px;
+  }
+  
+  .section-titl::after {
+    right: -70px;
+  }
+  
+  /* Card Wrapper */
+  .mission-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Card */
+  .mission-card {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 330px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Card Image */
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Card Content */
+  .card-content {
+    text-align: center;
+    padding: 50px 20px 25px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .mission-card:hover .card-content {
+    transform: translateY(-15px);
+    opacity: 0.95;
+  }
+  
+  /* Number Badge */
+  .card-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    background: #f3f3f3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -40px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title & Description */
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 8px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mission-cards-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mission-card {
+      max-width: 90%;
+    }
+  
+    .section-titl::before,
+    .section-titl::after {
+      width: 30px;
+    }
+  
+    .section-titl::before {
+      left: -35px;
+    }
+  
+    .section-titl::after {
+      right: -35px;
+    }
+  }
+  
+
+
+  /* CSS */
+.solutions-overview {
+    background: url('../images/Embex\ 00.3425\ D.png') center center/cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .solutions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .solutions-subheading {
+    text-transform: uppercase;
+    color: #00bfff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  
+  .solutions-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .solution-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  .solution-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #00bfff;
+  }
+  
+  .solution-value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .solution-text {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .solutions-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .solutions-heading {
+      font-size: 40px;
+    }
+  }
+  
+
+
+  /* Request Quote Styles */
+.quote-section {
+    /* background-color; */
+    padding: 80px 20px;
+  }
+  
+  .quote-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .quote-left {
+    flex: 1;
+  }
+  
+  .quote-left h2 {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .quote-left p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .underline {
+    width: 60px;
+    height: 2px;
+    background-color: red;
+  }
+  
+  .quote-right {
+    flex-shrink: 0;
+  }
+  
+  .quote-btn {
+    display: inline-block;
+    background-color: #e62828;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  
+
+
+  /* Container for the logo section */
+.logo {
+    width: 100%;
+    overflow: hidden; /* Hide logos outside the visible area */
+    position: relative;
+    background-color: #f0f0f0; /* Optional background color */
+    padding: 20px 0; /* Padding for spacing */
+  }
+  
+  /* The slider wrapper */
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Track that holds the logos */
+  .logo-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    width: 100%; /* Ensure it can fit all logos */
+  }
+  
+  /* Each logo item */
+  .logo-item {
+    flex: 0 0 33.33%; /* Show 3 logos at a time */
+    padding: 0 15px; /* Optional padding for spacing between logos */
+  }
+  
+  /* Logo images */
+.logo-item img {
+    width: 150px; /* Make the logos smaller */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Keyframe for automatic sliding */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    33.33% {
+      transform: translateX(-33.33%); /* Slide to show the second set of 3 logos */
+    }
+    66.66% {
+      transform: translateX(-66.66%); /* Slide to show the third set of 3 logos */
+    }
+    100% {
+      transform: translateX(0); /* Loop back to the first set of logos */
+    }
+  }
+  
+  /* Apply the animation to the logo track */
+  .logo-track {
+    animation: slide 9s infinite; /* Slide every 9 seconds, infinite loop */
+  }
+  
+
+  :root {
+    --primary-color: #4d4d4d;
+    --accent-color: #ff4d4d;
+    --bg-light: #f1f1f6;
+    --card-bg: #fff;
+    --text-gray: #777;
+    --star-color: #ffcc00;
+  }
+
+
+  .testimonial-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 30px;
+  }
+
+  .section-heade {
+    /* text-align: center; */
+    margin-bottom: 40px;
+  }
+
+  .section-subtit {
+    color: var(--accent-color);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .section-tit {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .testimonial-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px 25px 20px;
+    margin: 0 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+  }
+
+  .testimonial-card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--card-bg);
+    transform: rotate(45deg) translateX(-50%);
+  }
+
+  .recommendation-title {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+  }
+
+  .stars {
+    color: var(--star-color);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--primary-color);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-date {
+    font-size: 12px;
+    color: var(--text-gray);
+    text-align: center;
+  }
+
+  .client-info {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .client-logo {
+    height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .client-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--primary-color);
+  }
+
+  .client-role {
+    font-size: 13px;
+    color: var(--text-gray);
+  }
+
+  /* Styling the slider navigation buttons */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black; /* White arrow color */
+    font-size: 30px; /* Larger font size for better visibility */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    z-index: 10; /* Ensure buttons are on top of the slider content */
+  }
+  
+  /* Styling the previous button */
+  .prev-btn {
+    left: 10px; /* Position it towards the left of the slider */
+  }
+  
+  /* Styling the next button */
+  .next-btn {
+    right: 10px; /* Position it towards the right of the slider */
+  }
+  
+  
+  
+  /* Optional: Styling for smaller screens */
+  @media (max-width: 600px) {
+    .slider-nav {
+      font-size: 24px; /* Smaller buttons for mobile screens */
+      padding: 8px; /* Smaller padding */
+    }
+  }
+  
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+
+  .dot.active {
+    background: var(--primary-color);
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 5px;
+    }
+  }
