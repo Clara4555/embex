@@ -687,7 +687,7 @@ header {
   }
   
   /* The slider wrapper */
-  .slider {
+  .slide {
     display: flex;
     justify-content: center;
     align-items: center;
