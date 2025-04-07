@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+.about-hero {
+    background: url('../images/Embex\ 00.3425\ H.png') center/cover no-repeat;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .about-content {
+    position: relative;
+    color: white;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+
+  .about-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .about-links {
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .about-links a {
+    padding: 10px 18px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .about-links a.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .about-links a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .about-title {
+      font-size: 32px;
+    }
+
+    .about-description {
+      font-size: 14px;
+    }
+
+    .about-links a {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }

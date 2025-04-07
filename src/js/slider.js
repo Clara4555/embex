@@ -1,15 +1,14 @@
-let index = 0;
-
-function showSlides() {
+document.addEventListener('DOMContentLoaded', function () {
+  let index = 0;
+  function showSlides() {
     let slides = document.querySelectorAll('.slide');
     slides.forEach(slide => slide.classList.remove('active'));
-    
     slides[index].classList.add('active');
     index = (index + 1) % slides.length;
-}
+  }
 
-setInterval(showSlides, 3000); // Change slide every 3 seconds
-
+  setInterval(showSlides, 3000);
+});
 // Trigger service cards animation when they enter viewport
 document.addEventListener("DOMContentLoaded", () => {
     const services = document.querySelectorAll('.service');

@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+.about-hero {
+    background: url('../images/Embex\ 00.3425\ H.png') center/cover no-repeat;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .about-content {
+    position: relative;
+    color: white;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+
+  .about-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .about-links {
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .about-links a {
+    padding: 10px 18px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .about-links a.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .about-links a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .about-title {
+      font-size: 32px;
+    }
+
+    .about-description {
+      font-size: 14px;
+    }
+
+    .about-links a {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
+
+  .shipping-fleet {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  } 
+  
+  .fleet-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .fleet-title {
+    font-size: 42px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 30px;
+  }
+  
+   .fleet-container p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+  } 
+.fleet-note {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+  } 
+
+  
+   .vessel-gallery {
+    background: #9ca0a2;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .gallery-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #111;
+  }
+  
+  .vessel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .vessel-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  /* Trigger animation on scroll */
+  .vessel-img.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 600px) {
+    .gallery-title {
+      font-size: 22px;
+    }
+  }
+  .service-blocks {
+    margin-top: 50px;
+    background: #9ca0a2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+    text-align: left;
+  }
+  
+  .service {
+    flex: 1 1 300px;
+    max-width: 350px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .service.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .service img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .service a {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .service a:hover{
+    color: blue;
+  }
+  
+  .service p {
+    font-size: 14px;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .service-blocks {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .cta-section {
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.85), rgba(0, 128, 0, 0.3)), 
+                url('../images/Embex\ 00.3425\ F.png') no-repeat center center/cover;
+    padding: 60px 20px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    min-height: 250px;
+  }
+  
+  .cta-content {
+    max-width: 600px;
+  }
+  
+  .cta-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button span {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-button:hover span {
+    transform: translateX(5px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cta-section {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .cta-content h2 {
+      font-size: 22px;
+    }
+  }
+  
+
+  .site-footer {
+    color: #333;
+    margin-top: 60px;
+    padding: 50px 20px 30px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 250px;
+  }
+  
+  .footer-column h4 {
+    color: #e53935;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .footer-column p {
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #e53935;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    color: #666;
+    font-size: 13px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-column {
+      max-width: 600px;
+    }
+  }
+  
+    
+
