@@ -6,15 +6,53 @@
     <title>Embex</title>
     <link rel="stylesheet" href="./src/styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
 
+  <nav class="nav">
+    <div class="container">
+        <img class="montalex" src="./src/images/Embex A Primary Logo.png" alt="" srcset="">
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="./src/pages/about.html" class="">About us 
+                        <span class="dropdown-toggle arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./src/pages/sustainability.html">Sustainability</a></li>
+                        <li><a href="./src/pages/energy-transition.html">Energy Transition</a></li>
+                        <li><a href="./src/pages/shipping.html">Shipping</a></li>
+                    </ul>
+                </li>                    
+      <li><a href="./src/pages/terminal-port.html">Terminal and Port</a></li>
+                <li class="dropdown">
+                    <a href="./src/pages/services.html" class="">Services
+                    <span class="dropdown-toggle arrow">▼</span></a>
+                    <ul class="dropdown-menu ii">
+                        <li><a href="./src/pages/tank-storage.html">Tank Storage</a></li>
+                        <li><a href="./src/pages/crude-transhipment.html">Crude Transhippment</a></li>
+                        <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="./src/pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
     <!-- Hero Section -->
     <header>
       <div class="slider">
         <div class="slides">
-            <img src="./src/assets/images/Embex- branded/Embex 00.3425 E.png" class="slide active" alt="Slide 1">
+            <img src="./src/assets/images/Embex- branded/Embex 00.3425 E.png" class="slide" alt="Slide 1">
             <img src="./src/assets/images/Embex- branded/img21.jpeg" class="slide" alt="Slide 2">
             <img src="./src/assets/images/Embex- branded/Embex 00.3425 F.png" class="slide" alt="Slide 3">
         </div>
@@ -429,6 +467,6 @@
       </div>
   </section>
 
-    <script src="./src/js/slider.js"></script>
+    <script src="./src/script/slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,411 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../Montalex/Website/img99123.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+/* Layout */
+.content-container {
+    width: 100%;
+    background-color: #ddd;
+    margin: auto;
+    padding: 90px 180px;
+}
+
+.content-container h2{
+    font-size:xx-large;
+}
+
+.underline {
+    background-color: green;
+    width: 200px; /* Start with zero width */
+    margin-bottom: 40px;
+    height: 3px;
+    transition: width 5s ease-in-out; /* Smooth transition on width */
+    transform-origin: left; /* Makes it stretch from left to right */
+}
+
+/* Heading Styles */
+.title-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Paragraph Styles */
+.text-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.wrapper-wrapper{
+    background-color: #238097c5;
+    margin: -50px;
+    margin-top: 0px !important;
+    padding: 70px;
+}
+
+/* Layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Left Section */
+.storage-info {
+    flex: 1;
+    max-width: 60%;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Right Section */
+.info-box {
+    flex: 1;
+    max-width: 40%;
+}
+
+.info-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Info Cards */
+.info-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.info-card-title {
+    font-size: 16px;
+    font-weight: 120px !important;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+.info-card-description {
+    font-size: 16px;
+    color: #444;
+}
+
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust based on preference */
+    background: url('../Montalex/Website/img-88.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* Green Overlay */
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 128, 0, 0.7); /* Green tint */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Hero Text */
+.hero-content {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 600px;
+    margin-left: 10%;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #ff9800;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: #ff9800;
+}
+
+/* Image Container */
+.image-container {
+    max-width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.image-container img {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 5px; /* Optional: Adds a slight rounded edge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds depth */
+}
+
+
+
+/* Call-to-Action Section */
+.cta-container {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-container h2{
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 8px;
+}
+
+.cta-button {
+    background-color: #24b0e6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #1a90c2;
+}
+
+/* Tank Storage Section */
+.tank-storage {
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+}
+
+.storage-section{
+    background-color: #238097c5;
+
+}
+
+.storage-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.storage-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.storage-text {
+    flex: 1;
+}
+
+.storage-text h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.storage-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+}
+
+.storage-text span{
+    color:#1a90c2;
+}
+
+/* Storage Section */
+.storage-section {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+/* Container */
+.containe {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.storage-section .section-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: #041533;
+    margin-bottom: 30px;
+}
+
+/* Storage Item */
+.storage-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #0A2A67;
+    border-radius: 5px;
+}
+
+/* Storage Title */
+.storage-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0A2A67;
+    margin-bottom: 10px;
+}
+
+/* Storage Description */
+.storage-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+@media (max-width: 900px) {
+    .underline{
+        display: none;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .storage-info, .info-box {
+        max-width: 100%;
+    }
+    .sustainability-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sustainability-box {
+        width: 90%;
+        text-align: left;
+    }
+}
+@media (max-width: 768px) {
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+    .content-container {
+        padding: 30px 15px;
+    }
+
+    .title-heading {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .text-content {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .intro-text {
+        text-align: center;
+        float: none;
+        max-width: 100%;
+    }
+    .technology-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .technology-content img {
+        width: 100%;
+    }
+
+    .sustainability-content {
+        text-align: center;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .hero-content {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: auto;
+    }
+    .image-container img {
+        width: 95%;
+    }
+    .storage-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .storage-image img {
+        max-width: 100%;
+    }
+    .storage-section {
+        padding: 30px 15px;
+    }
+
+    .storage-title {
+        font-size: 20px;
+    }
+
+    .storage-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .storage-title {
+        font-size: 18px;
+    }
+
+    .storage-description {
+        font-size: 13px;
+    }
+}

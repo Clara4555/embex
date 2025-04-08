@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 100px; */
+    background: url(../Montalex/Website/img1992000.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+
+
+
+/* Section Wrapper */
+.section-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Content */
+.text-section {
+    margin-bottom: 30px;
+   
+}
+
+.crude-container{
+    background-color: #1c5fa3af;
+    padding: 60px 220px;
+}
+
+/* Headings */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* Paragraph */
+.section-text {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Divider */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: white;
+    margin: 20px 180px;
+}
+
+
+
+
+
+
+
+/* Contact Section */
+.contact-section {
+    background-color: #002f6c; /* Dark Blue */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.contact-email, .contact-phone {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Partners Section */
+.partners-section {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.partner-logo {
+    height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-text {
+        font-size: 14px;
+    }
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .contact-email, .contact-phone {
+        font-size: 16px;
+    }
+
+    .partner-logo {
+        height: 40px;
+        max-width: 1
+}
+}

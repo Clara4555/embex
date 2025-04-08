@@ -1,0 +1,33 @@
+/* General transition for smooth effects */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+body, html{
+    overflow-x: hidden;
+}
+
+img {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Image transition (smooth zoom effect on hover) */
+img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
