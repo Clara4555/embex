@@ -1,15 +1,70 @@
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    /* padding: 100px; */
-    background: url(../Montalex/Website/img1992000.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000000;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #1b4d65;
 }
 
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 90px;
+  background-color: #fcfdfd;
+}
+
+.section.mirrored {
+  flex-direction: row-reverse;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+}
+
+.content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #174861;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #1b4d65;
+}
+
+.content button {
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0071bc;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.content button:hover {
+  background-color: #005b9a;
+}
 
 
 
@@ -109,6 +164,21 @@ body {
 
 
 /* Responsive Design */
+
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section.mirrored {
+    flex-direction: column;
+  }
+
+  .image-container, .content {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
     .section-container {
         padding: 20px;

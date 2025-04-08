@@ -1,125 +1,131 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+:root {
+  --dark-bg: #0e1423;
+  --highlight: #c32127;
+  --text-main: #222;
+  --text-muted: #777;
+  --primary-color: #4d4d4d;
+  --accent-color: #ff4d4d;
+  --bg-light: #f1f1f6;
+  --card-bg: #fff;
+  --text-gray: #777;
+  --dark-bg: #0e1423;
+  --highlight: #c32127;
+  --light-bg: #f9f9f9;
+  --star-color: #ffcc00;
 }
 
-/* Hero Section */
-header {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-}
 
-.slider {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
 }
 
 .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-/* Animated Text */
-.overlay h1 {
-    font-size: 48px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 0.3s;
+.hero-content {
+  color: #fff;
+  max-width: 800px;
 }
 
-.overlay p {
-    margin: 10px 0;
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 0.6s;
+.welcome-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-/* Fade Up Keyframes */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.company-name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .buttons {
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
 
-.red {
-    background: red;
-    color: white;
-    font-weight: bold;
-    animation: fadeIn 2s ease-in-out;
+.btn-primary {
+  background-color: #c10c0c;
+  color: #fff;
 }
 
-.red:hover {
-    background: darkred;
-    transform: scale(1.05);
+.btn-primary:hover {
+  background-color: #9e0a0a;
 }
 
-.white {
-    background: white;
-    color: black;
-    margin-left: 10px;
-    animation: fadeIn 2.5s ease-in-out;
+.btn-secondary {
+  background-color: #fff;
+  color: #000;
 }
 
-.white:hover {
-    background: lightgray;
-    transform: scale(1.05);
+.btn-secondary:hover {
+  background-color: #f0f0f0;
 }
 
-/* Services Section - Overlapping Header */
+/* keyframes */
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-33.33%); 
+  }
+  66.66% {
+    transform: translateX(-66.66%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+
+
 .services {
     display: flex;
     justify-content: space-between;
     padding: 50px;
     background: white;
     position: relative;
-    top: -70px; /* Moves the section up to overlay the header */
+    top: -70px; 
     z-index: 10;
     flex-wrap: wrap;
 }
@@ -141,7 +147,6 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Reset: Content is visible by default */
 .service i,
 .service h3,
 .service p {
@@ -150,7 +155,7 @@ header {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* On hover: give it a subtle movement and fade for polish */
+
 .service:hover i,
 .service:hover h3,
 .service:hover p {
@@ -158,7 +163,6 @@ header {
     opacity: 1;
 }
 
-/* Stagger effect on hover */
 .service:hover i {
     transition-delay: 0.05s;
 }
@@ -169,7 +173,7 @@ header {
     transition-delay: 0.15s;
 }
 
-/* Position the Arrow Button Correctly */
+
 .more-btn {
     position: absolute;
     bottom: 15px;
@@ -187,61 +191,6 @@ header {
     font-size: 36px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .overlay {
-        width: 90%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .service {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .overlay {
-        width: 100%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-}
 
 
 /* ABOUT US SECTION */
@@ -293,21 +242,7 @@ header {
     color: #666;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 1024px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .about-content {
-        padding-left: 0;
-    }
-
-    .about-image img {
-        max-width: 80%;
-    }
-}
 
 
 
@@ -384,46 +319,15 @@ header {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 1024px) {
-    .services-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .services-images {
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .services-images .overlay-image {
-        bottom: -20px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
 
 
-/* Base Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-  }
-  
+
   /* Section Styling */
   .mission-section {
     padding: 80px 20px;
     background-color: #ffffff;
     text-align: center;
+    line-height: 1.6;
   }
   
   .section-titl{
@@ -525,30 +429,7 @@ header {
     line-height: 1.6;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .mission-cards-wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
   
-    .mission-card {
-      max-width: 90%;
-    }
-  
-    .section-titl::before,
-    .section-titl::after {
-      width: 30px;
-    }
-  
-    .section-titl::before {
-      left: -35px;
-    }
-  
-    .section-titl::after {
-      right: -35px;
-    }
-  }
   
 
 
@@ -609,16 +490,7 @@ header {
     margin-top: 5px;
   }
   
-  /* Responsive Design */
-  @media (min-width: 768px) {
-    .solutions-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  
-    .solutions-heading {
-      font-size: 40px;
-    }
-  }
+ 
   
 
 
@@ -677,7 +549,7 @@ header {
   
 
 
-  /* Container for the logo section */
+ 
 .logo {
     width: 100%;
     overflow: hidden; /* Hide logos outside the visible area */
@@ -695,55 +567,34 @@ header {
     width: 100%;
   }
   
-  /* Track that holds the logos */
+  
   .logo-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-    width: 100%; /* Ensure it can fit all logos */
+    transition: transform 0.5s ease-in-out; 
+    width: 100%; 
   }
   
-  /* Each logo item */
+ 
   .logo-item {
-    flex: 0 0 33.33%; /* Show 3 logos at a time */
-    padding: 0 15px; /* Optional padding for spacing between logos */
+    flex: 0 0 33.33%; 
+    padding: 0 15px; 
   }
   
   /* Logo images */
 .logo-item img {
-    width: 150px; /* Make the logos smaller */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Keyframe for automatic sliding */
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    33.33% {
-      transform: translateX(-33.33%); /* Slide to show the second set of 3 logos */
-    }
-    66.66% {
-      transform: translateX(-66.66%); /* Slide to show the third set of 3 logos */
-    }
-    100% {
-      transform: translateX(0); /* Loop back to the first set of logos */
-    }
-  }
-  
-  /* Apply the animation to the logo track */
-  .logo-track {
-    animation: slide 9s infinite; /* Slide every 9 seconds, infinite loop */
+    width: 150px; 
+    height: auto; 
   }
   
 
-  :root {
-    --primary-color: #4d4d4d;
-    --accent-color: #ff4d4d;
-    --bg-light: #f1f1f6;
-    --card-bg: #fff;
-    --text-gray: #777;
-    --star-color: #ffcc00;
+  
+
+  .logo-track {
+    animation: slide 9s infinite; 
   }
+  
+
+  
 
 
   .testimonial-section {
@@ -781,158 +632,116 @@ header {
     transition: transform 0.4s ease-in-out;
   }
 
-  .testimonial-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    padding: 30px 25px 20px;
-    margin: 0 10px;
-    flex: 0 0 50%;
-    max-width: 50%;
+
+  .testimonials-wrapper {
+    background-color: #f1f1f7;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-subtitle {
+    color: #c10c0c;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .testimonials-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
     position: relative;
   }
 
-  .testimonial-card::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: var(--card-bg);
-    transform: rotate(45deg) translateX(-50%);
+  .testimonial-card {
+    background: #fff;
+    padding: 30px;
+    margin: 0 10px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 
-  .recommendation-title {
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 8px;
-    color: var(--primary-color);
+  .testimonial-card.active {
+    display: flex;
   }
 
-  .stars {
-    color: var(--star-color);
-    text-align: center;
-    margin-bottom: 15px;
+  .testimonial-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
   }
 
-  .testimonial-text {
-    font-size: 15px;
-    color: var(--primary-color);
-    line-height: 1.6;
-    text-align: center;
+  .testimonial-stars {
+    color: #f7b900;
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
 
+  .testimonial-message {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+  }
+
   .testimonial-date {
-    font-size: 12px;
-    color: var(--text-gray);
-    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 20px;
   }
 
-  .client-info {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  .client-logo {
-    height: 24px;
-    margin-bottom: 10px;
-  }
-
-  .client-name {
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--primary-color);
-  }
-
-  .client-role {
-    font-size: 13px;
-    color: var(--text-gray);
-  }
-
-  /* Styling the slider navigation buttons */
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black; /* White arrow color */
-    font-size: 30px; /* Larger font size for better visibility */
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-    z-index: 10; /* Ensure buttons are on top of the slider content */
-  }
-  
-  /* Styling the previous button */
-  .prev-btn {
-    left: 10px; /* Position it towards the left of the slider */
-  }
-  
-  /* Styling the next button */
-  .next-btn {
-    right: 10px; /* Position it towards the right of the slider */
-  }
-  
-  
-  
-  /* Optional: Styling for smaller screens */
-  @media (max-width: 600px) {
-    .slider-nav {
-      font-size: 24px; /* Smaller buttons for mobile screens */
-      padding: 8px; /* Smaller padding */
-    }
-  }
-  
-  .slider-dots {
+  .testimonial-user {
     display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
     justify-content: center;
+  }
+
+  .testimonial-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  .testimonial-nav {
     margin-top: 30px;
   }
 
-  .dot {
-    width: 8px;
-    height: 8px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: 0 4px;
+  .testimonial-nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
   }
 
-  .dot.active {
-    background: var(--primary-color);
+  .testimonial-nav button:hover {
+    color: #c10c0c;
   }
 
-  @media (max-width: 900px) {
-    .testimonial-card {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin: 0 5px;
-    }
-  }
+ 
 
 
-
-  :root {
-    --dark-bg: #0e1423;
-    --highlight: #c32127;
-    --light-bg: #f9f9f9;
-    --text-main: #222;
-    --text-muted: #777;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff;
-    padding: 60px 20px;
-  }
-
+  
   .faq-contact-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1090,13 +899,142 @@ header {
     font-size: 18px;
   }
 
-  @media (max-width: 900px) {
-    .faq-contact-wrapper {
-      flex-direction: column;
-    }
 
-    .faq-side,
-    .contact-side {
-      flex: 1 1 100%;
-    }
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services {
+      flex-direction: column;
+      align-items: center;
   }
+
+  .service {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .overlay {
+      width: 90%;
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 36px;
+  }
+
+  p {
+      font-size: 16px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-content {
+    padding-left: 0;
+}
+
+.about-image img {
+    max-width: 80%;
+}
+.services-section {
+  flex-direction: column;
+  text-align: center;
+}
+
+.services-images {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.services-images .overlay-image {
+  bottom: -20px;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+}
+
+
+@media (max-width: 900px) {
+  .faq-contact-wrapper {
+    flex-direction: column;
+  }
+
+  .faq-side,
+  .contact-side {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-name {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+  .mission-cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission-card {
+    max-width: 90%;
+  }
+
+  .section-titl::before,
+  .section-titl::after {
+    width: 30px;
+  }
+
+  .section-titl::before {
+    left: -35px;
+  }
+
+  .section-titl::after {
+    right: -35px;
+  }
+  .testimonial-card {
+    margin: 0;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .service {
+      width: 100%;
+      padding: 30px;
+  }
+
+  .overlay {
+      width: 100%;
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 30px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .btn {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+}
+
+
+  

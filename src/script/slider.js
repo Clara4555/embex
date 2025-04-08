@@ -1,14 +1,22 @@
-document.addEventListener('DOMContentLoaded', function () {
-  let index = 0;
-  function showSlides() {
-    let slides = document.querySelectorAll('.slide');
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-    index = (index + 1) % slides.length;
-  }
+const hero = document.getElementById("hero");
+const images = [
+  "./src/assets/images/Embex- branded/Embex 00.3425 E.png",  // Replace with your actual image paths
+  "./src/assets/images/Embex- branded/img21.jpeg",
+  "./src/assets/images/Embex- branded/Embex 00.3425 F.png"
+];
 
-  setInterval(showSlides, 3000);
-});
+let index = 0;
+
+function changeBackground() {
+  hero.style.backgroundImage = `url('${images[index]}')`;
+  index = (index + 1) % images.length;
+}
+
+// Initial load
+changeBackground();
+
+// Change image every 5 seconds
+setInterval(changeBackground, 5000);
 // Trigger service cards animation when they enter viewport
 document.addEventListener("DOMContentLoaded", () => {
     const services = document.querySelectorAll('.service');
@@ -45,46 +53,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  const track = document.getElementById('sliderTrack');
-  const dots = document.querySelectorAll('.dot');
-  const prev = document.querySelector('.prev-btn');
-  const next = document.querySelector('.next-btn');
   
-  let count = 0; // Corrected variable name from 'inde' to 'index'
-  
-  // Update the slider position and the active dot
-  function updateSlider() {
-    track.style.transform = `translateX(-${count * 100}%)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === count);
+  let currentTestimonial = 0;
+  const testimonials = document.querySelectorAll('.testimonial-card');
+
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.classList.toggle('active', i === index);
     });
   }
-  
-  // Go to the previous slide
-  prev.addEventListener('click', () => {
-    count = (count - 1 + dots.length) % dots.length; // Wrap around when reaching the first slide
-    updateSlider();
-  });
-  
-  // Go to the next slide
-  next.addEventListener('click', () => {
-    count = (count + 1) % dots.length; // Wrap around when reaching the last slide
-    updateSlider();
-  });
-  
-  // Optionally, add functionality to make dots clickable
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      count = i;
-      updateSlider();
-    });
-  });
-  
-  // Set up auto-slide functionality
-  function autoSlide() {
-    count = (count + 1) % dots.length; // Move to the next slide and wrap around
-    updateSlider();
+
+  function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
   }
+
+  function prevTestimonial() {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }
+
+  // Auto-slide every 8s
+  setInterval(nextTestimonial, 8000);
+
+
   
   // Automatically slide every 3 seconds (3000ms)
   const autoSlideInterval = setInterval(autoSlide, 3000);

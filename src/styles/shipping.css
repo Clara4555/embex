@@ -73,20 +73,7 @@
     opacity: 1;
   }
 
-  @media (max-width: 600px) {
-    .about-title {
-      font-size: 32px;
-    }
 
-    .about-description {
-      font-size: 14px;
-    }
-
-    .about-links a {
-      padding: 8px 12px;
-      font-size: 12px;
-    }
-  }
 
   .shipping-fleet {
     padding: 60px 20px;
@@ -155,12 +142,7 @@
     transform: translateY(0);
   }
   
-  /* Responsive Typography */
-  @media (max-width: 600px) {
-    .gallery-title {
-      font-size: 22px;
-    }
-  }
+ 
   .service-blocks {
     margin-top: 50px;
     background: #9ca0a2;
@@ -209,13 +191,7 @@
     line-height: 1.6;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .service-blocks {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  
 
   .cta-section {
     background: linear-gradient(to right, rgba(0, 128, 0, 0.85), rgba(0, 128, 0, 0.3)), 
@@ -259,17 +235,7 @@
     transform: translateX(5px);
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .cta-section {
-      justify-content: center;
-      text-align: center;
-    }
   
-    .cta-content h2 {
-      font-size: 22px;
-    }
-  }
   
 
   .site-footer {
@@ -339,10 +305,39 @@
       text-align: center;
     }
   
+      .service-blocks {
+        flex-direction: column;
+        align-items: center;
+      }
+  
     .footer-column {
       max-width: 600px;
     }
+    .cta-section {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .cta-content h2 {
+      font-size: 22px;
+    }
   }
   
-    
 
+  @media (max-width: 600px) {
+    .about-title {
+      font-size: 32px;
+    }
+    .gallery-title {
+      font-size: 22px;
+    }
+
+    .about-description {
+      font-size: 14px;
+    }
+
+    .about-links a {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }

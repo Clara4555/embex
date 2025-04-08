@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embex</title>
-    <link rel="stylesheet" href="./src/styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/about-us.css">
     <link rel="stylesheet" href="./src/styles/global.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-
   <nav class="nav">
     <div class="container">
-        <img class="montalex" src="./src/images/Embex A Primary Logo.png" alt="" srcset="">
+        <img class="montalex" src="../images/Embex A Primary Logo White.pn" alt="" srcset="">
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="./src/pages/about.html" class="">About us 
+                    <a href="./src/pages/about-us.html" class="">About us 
                         <span class="dropdown-toggle arrow">▼</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -34,7 +33,7 @@
                     <span class="dropdown-toggle arrow">▼</span></a>
                     <ul class="dropdown-menu ii">
                         <li><a href="./src/pages/tank-storage.html">Tank Storage</a></li>
-                        <li><a href="./src/pages/crude-transhipment.html">Crude Transhippment</a></li>
+                        <li><a href="./src/pages/crude-shipment.html">Crude Transhippment</a></li>
                         <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
                     </ul>
                 </li>
@@ -48,24 +47,27 @@
         </span>
     </div>
 </nav>
+
+
+ 
     <!-- Hero Section -->
-    <header>
-      <div class="slider">
-        <div class="slides">
-            <img src="./src/assets/images/Embex- branded/Embex 00.3425 E.png" class="slide" alt="Slide 1">
-            <img src="./src/assets/images/Embex- branded/img21.jpeg" class="slide" alt="Slide 2">
-            <img src="./src/assets/images/Embex- branded/Embex 00.3425 F.png" class="slide" alt="Slide 3">
+    <div class="hero" id="hero">
+      <div class="overlay">
+        <div class="hero-content">
+          <div class="welcome-text">Welcome to</div>
+          <div class="company-name">Embex</div>
+          <div class="description">
+            Discover innovative solutions and exceptional service tailored to oil storage and logistics needs.
+            Explore our range of products and services designed to elevate your business.
+          </div>
+          <div class="buttons">
+            <button class="btn btn-primary">Learn More →</button>
+            <button class="btn btn-secondary">Our Services</button>
+          </div>
         </div>
+      </div>
     </div>
-        <div class="overlay">
-            <h1>DEBOVAT B.V</h1>
-            <p>Discover innovative solutions and exceptional service tailored to oil storage and logistics needs. Explore our range of products and services designed to elevate your business.</p>
-            <div class="buttons">
-                <a href="#" class="btn red">Learn More <span>&rarr;</span></a>
-                <a href="#" class="btn white">Our Services</a>
-            </div>
-        </div>
-    </header>
+  
 
     <!-- Services Section -->
     <section class="services">
@@ -253,150 +255,53 @@
     </div>
   </section>
 
-  <section class="testimonial-section">
-    <div class="section-heade">
-      <p class="section-subtit">What people are saying</p>
-      <h2 class="section-tit">From Our Partners to You</h2>
-    </div>
+ <!-- Testimonials Section -->
+<section class="testimonials-wrapper">
+  <div class="testimonials-heading">
+    <p class="testimonials-subtitle">What People Are Saying</p>
+    <h2 class="testimonials-title">From Our Partners to You</h2>
+  </div>
 
-    <div class="slider-wrapper">
-      <button class="slider-nav prev-btn">&#10094;</button>
-      <div class="slider-track" id="sliderTrack">
-        <!-- Slide 1 -->
-        <div class="testimonial-card">
-          <p class="recommendation-title">Recommendation</p>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <p class="testimonial-text">
-            I am delighted to share my experience with Debovat B.V, a company that has truly set the standard for excellence in the industry. Our partnership with Debovat has been nothing short of exceptional...
-          </p>
-          <p class="testimonial-date">08.5.2020</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/M5R4RGx/caltrex.png" class="client-logo" alt="client logo">
-            <p class="client-name">Ricado Kane</p>
-            <p class="client-role">Oil partner</p>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="testimonial-card">
-          <p class="recommendation-title">Recommendation</p>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">
-            Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-          </p>
-          <p class="testimonial-date">6 Month Ago</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-            <p class="client-name">Lydon Martins</p>
-            <p class="client-role">Oil partner</p>
-          </div>
-        </div>
-
-        <!-- Add more slides if needed -->
-        <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <!-- Add more slides if needed -->
-        <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <!-- Add more slides if needed -->
-        <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <!-- Add more slides if needed -->
-        <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <!-- Add more slides if needed -->
-        <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p class="recommendation-title">Recommendation</p>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-text">
-              Their innovative approach, commitment to responsibility, and the quality of their services have undoubtedly added significant value to our operations...
-            </p>
-            <p class="testimonial-date">6 Month Ago</p>
-            <div class="client-info">
-              <img src="https://i.ibb.co/hsmtPJH/pnoc.png" class="client-logo" alt="client logo">
-              <p class="client-name">Lydon Martins</p>
-              <p class="client-role">Oil partner</p>
-            </div>
-          </div>
+  <div class="testimonials-container" id="testimonial-slider">
+    <div class="testimonial-card active">
+      <h4 class="testimonial-heading">Excellence</h4>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-message">
+        From the outset, Embex state-of-the-art facilities and cutting-edge technology. 
+        Their storage capabilities are not only extensive but also equipped with the latest 
+        advancements, ensuring the safety, security, and integrity of our valuable oil assets 
+        also provided us with a sense of confidence in the management of our resources.
+      </p>
+      <p class="testimonial-date">7 Days Ago</p>
+      <div class="testimonial-user">
+        <img src="./src/assets/images/Embex- branded/Embex 00.3425 I.png" alt="Petronas Logo" class="testimonial-logo">
+        <p><strong>Damion D. Stewart</strong><br><span>Oil Partner</span></p>
       </div>
-      <button class="slider-nav next-btn">&#10095;</button>
     </div>
 
-    <div class="slider-dots">
-      <div class="dot active"></div>
-      <div class="dot"></div>
+    <div class="testimonial-card">
+      <h4 class="testimonial-heading">Simply The Best</h4>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-message">
+        Embex Storage and Logistics Services has been a strategic move for our company.
+        Their innovative approach, commitment to responsibility, and the quality of their services
+        have undoubtedly added significant value to our operations. Consistently go above and beyond 
+        to address our unique Storage needs.
+      </p>
+      <p class="testimonial-date">10.04.2018</p>
+      <div class="testimonial-user">
+        <img src="./src/assets/images/Embex- branded/Embex 00.3425 K.png" alt="Total Logo" class="testimonial-logo">
+        <p><strong>Tom Jones</strong><br><span>Oil partner</span></p>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Slider Buttons -->
+  <div class="testimonial-nav">
+    <button onclick="prevTestimonial()">&#10094;</button>
+    <button onclick="nextTestimonial()">&#10095;</button>
+  </div>
+</section>
 
   <section>
     <div class="faq-contact-wrapper">
@@ -466,6 +371,69 @@
         </div>
       </div>
   </section>
+
+  <footer>
+    <div class="footer-container">
+        
+        <div class="footer-logo">
+            <img src="../Montalex/Montalex Oil.svg" alt="Montalex Logo">
+            <p>We ship all over the world wherever you are.</p>
+            <p class="copyright">© 2023 Montalex Oil Refinery, TOO. All rights reserved.</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li class="dropdown">
+                    <a href="./src/pages/about-us.html" class=""><i class="fas fa-chevron-right"></i>About us 
+                        <span class="dropdown-toggle arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./src/pages/sustainability.html">Sustainability</a></li>
+                        <li><a href="./src/pages/energy-transition.html">Energy Transition</a></li>
+                        <li><a href="./src/pages/shipping.html">Shipping</a></li>
+                    </ul>
+                </li>  
+                <li><a href="./src/pages/terminal-port.html"><i class="fas fa-chevron-right"></i> Terminal Port</a></li>
+                <li class="dropdown">
+                    <a href="./src/pages/services.html" class=""><i class="fas fa-chevron-right"></i> Services
+                    <span class="dropdown-toggle arrow">▼</span></a>
+                    <ul class="dropdown-menu ii">
+                        <li><a href="./src/pages/tank-storage.html">Tank Storage</a></li>
+                        <li><a href="./src/pages/crude-transhipment.html">Crude Transhippment</a></li>
+                        <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="./src/pages/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+        </div>
+        
+
+        <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to get the latest news and offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 12 Address, Street Somewhere</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:sales@Montalex.kz">sales@Montalex.kz</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+77507793667">+77 50 779 36 67</a></p>
+        </div>
+    </div>
+</footer> 
 
     <script src="./src/script/slider.js"></script>
 </body>
