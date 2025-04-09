@@ -13,8 +13,8 @@
 <body>
   <nav class="nav">
     <div class="container">
-        <img class="montalex" src="../images/Embex A Primary Logo White.pn" alt="" srcset="">
-        <div id="mainListDiv" class="main_list">
+      <img class="montalex" src="./src/images/Embex A Primary Logo White.png" alt="" srcset="">
+      <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
@@ -37,7 +37,7 @@
                         <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
                     </ul>
                 </li>
-                <li><a href="./src/pages/contact.html">Contact</a></li>
+                <li><a href="./src/pages/contact-us.html">Contact</a></li>
             </ul>
         </div>
         <span class="navTrigger">
@@ -412,7 +412,7 @@
                         <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
                     </ul>
                 </li>
-                <li><a href="./src/pages/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="./src/pages/contact-us.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
             </ul>
         </div>
         
@@ -434,7 +434,59 @@
         </div>
     </div>
 </footer> 
-
-    <script src="./src/script/slider.js"></script>
 </body>
+<script src="./src/script/slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+        toggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            let parent = this.closest(".dropdown");
+
+            // Toggle the 'active' class on the clicked dropdown
+            parent.classList.toggle("active");
+
+            // Close other open dropdowns
+            document.querySelectorAll(".dropdown").forEach(function (drop) {
+                if (drop !== parent) {
+                    drop.classList.remove("active");
+                }
+            });
+        });
+    });
+});
+
+
+
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+
+function showTab(event, tabId) {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(content => content.classList.remove('active'));
+
+    // Add active class to the clicked tab and corresponding content
+    event.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectTitles = document.querySelectorAll(".project-title");
+
+    projectTitles.forEach(title => {
+        title.addEventListener("click", function () {
+            const parent = this.parentElement;
+            parent.classList.toggle("active");
+        });
+    });
+});
+    </script>
 </html>
