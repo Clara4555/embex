@@ -232,10 +232,10 @@
   </footer>     
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="../script/index.js"></script>
-<script src="../script/navbar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../script/active-tab.js"></script>
+  <script src="../script/navbar.js"></script>
+  <script src="../script/index.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
@@ -254,6 +254,36 @@
             });
         });
     });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+        toggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            let parent = this.closest(".dropdown");
+
+            // Toggle the 'active' class on the clicked dropdown
+            parent.classList.toggle("active");
+
+            // Close other open dropdowns
+            document.querySelectorAll(".dropdown").forEach(function (drop) {
+                if (drop !== parent) {
+                    drop.classList.remove("active");
+                }
+            });
+        });
+    });
+});
+
+
+
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
 });
 </script>
 </html>
