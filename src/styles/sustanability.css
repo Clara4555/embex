@@ -367,6 +367,13 @@
       .blog-wrapper {
         flex-direction: column;
       }
+
+      .blog-section {
+        margin-left: 0px !important	;
+        padding: 40px 20px;
+        background: #fff;
+      margin-left: 50px;
+      }
     }
   
   
