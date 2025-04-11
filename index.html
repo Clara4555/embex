@@ -28,15 +28,16 @@
                     </ul>
                 </li>                    
       <li><a href="./src/pages/terminal-port.html">Terminal and Port</a></li>
-                <li class="dropdown">
-                    <a href="./src/pages/services.html" class="">Services
-                    <span class="dropdown-toggle arrow">▼</span></a>
-                    <ul class="dropdown-menu ii">
-                        <li><a href="./src/pages/tank-storage.html">Tank Storage</a></li>
-                        <li><a href="./src/pages/crude-shipment.html">Crude Transhippment</a></li>
-                        <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
-                    </ul>
-                </li>
+      <li class="dropdown">
+        <a href="./src/pages/services.html" class="">Services
+            <span class="dropdown-toggle arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="./src/pages/tank-storage.html">Tank Storage</a></li>
+            <li><a href="./src/pages/crude-shipment.html">Crude transhipment</a></li>
+            <li><a href="./src/pages/bunkenring.html">Bunkering Services</a></li>
+        </ul>
+    </li>  
                 <li><a href="./src/pages/contact-us.html">Contact</a></li>
             </ul>
         </div>
@@ -61,8 +62,8 @@
             Explore our range of products and services designed to elevate your business.
           </div>
           <div class="buttons">
-            <button class="btn btn-primary">Learn More →</button>
-            <button class="btn btn-secondary">Our Services</button>
+            <a href="./src/pages/about-us.html" class="btn btn-primary">Learn More →</a>
+            <a  href="./src/pages/services.html" class="btn btn-secondary">Our Services</a>
           </div>
         </div>
       </div>
@@ -138,7 +139,7 @@
             employees, and community partners. Our plan for following through on this commitment relies on a foundation of 
             strong corporate governance.
         </p>
-        <a href="#" class="btn-primary">All Services <i class="fas fa-arrow-right"></i></a>
+        <a href="./src/pages/services.html" class="btn-primary">All Services <i class="fas fa-arrow-right"></i></a>
     </div>
 
     <div class="services-images">
@@ -306,50 +307,52 @@
   <section>
     <div class="faq-contact-wrapper">
         <!-- FAQ Section -->
-        <div class="faq-side">
-          <h3 class="faq-heading">FAQ Of Clients</h3>
-          <p class="faq-subtext">Frequently asked questions. Reach out bto us for more answers</p>
-    
-          <div class="faq-list">
-            <div class="faq-item active">
-              <div class="faq-question">
-                <span>What makes Debovat B.V stand out in the oil storage industry?</span>
-                <span class="faq-icon">−</span>
+        <div class="faq-contact-wrapper">
+          <div class="faq-side">
+            <h3 class="faq-heading">FAQ Of Clients</h3>
+            <p class="faq-subtext">Frequently asked questions. Reach out to us for more answers</p>
+        
+            <div class="faq-list">
+              <div class="faq-item active">
+                <div class="faq-question">
+                  <span>What makes Debovat B.V stand out in the oil storage industry?</span>
+                  <span class="faq-icon">−</span>
+                </div>
+                <div class="faq-answer">
+                  At Debovat B.V, our commitment to safety, reliability, and innovation sets us apart.
+                </div>
               </div>
-              <div class="faq-answer">
-                At Debovat B.V, our commitment to safety, reliability, and innovation sets us apart.
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>How does Debovat B.V prioritize environmental sustainability?</span>
+                  <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                  We integrate sustainable practices and eco-friendly technologies in all our operations.
+                </div>
               </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>How does Debovat B.V prioritize environmental sustainability?</span>
-                <span class="faq-icon">+</span>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>What is Debovat B.V's vision for the future of the oil storage industry?</span>
+                  <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                  Our vision includes innovation, global partnerships, and environmentally responsible growth.
+                </div>
               </div>
-              <div class="faq-answer">
-                We integrate sustainable practices and eco-friendly technologies in all our operations.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What is Debovat B.V's vision for the future of the oil storage industry?</span>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                Our vision includes innovation, global partnerships, and environmentally responsible growth.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What measures does Debovat B.V take to ensure the safety?</span>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                We apply rigorous safety protocols, staff training, and cutting-edge monitoring systems.
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>What measures does Debovat B.V take to ensure safety?</span>
+                  <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                  We apply rigorous safety protocols, staff training, and cutting-edge monitoring systems.
+                </div>
               </div>
             </div>
           </div>
         </div>
-    
+        
         <!-- Contact Section -->
         <div class="contact-side">
           <div class="info-block">
@@ -365,7 +368,7 @@
             <p class="info-line website">www.debovat-bv.com</p>
           </div>
     
-          <a class="contact-button" href="#">
+          <a class="contact-button" href="./src/pages/contact-us.html">
             GET DIRECTION <span>→</span>
           </a>
         </div>
@@ -490,6 +493,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all FAQ items
+const faqItems = document.querySelectorAll('.faq-item');
+
+// Loop through each FAQ item and add event listener
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const icon = question.querySelector('.faq-icon');
+  const answer = item.querySelector('.faq-answer');
+
+  question.addEventListener('click', () => {
+    // Toggle the 'active' class on the clicked item
+    item.classList.toggle('active');
+
+    // Change the icon text to '+' or '−' based on the active class
+    if (item.classList.contains('active')) {
+      icon.textContent = '−';  // Show minus when open
+    } else {
+      icon.textContent = '+';  // Show plus when closed
+    }
+  });
+});
+
+    // Your JavaScript code here
+  });
     </script>
     <script src="./src/script/active-tab.js"></script>
     <script src="./src/script/index.js"></script>

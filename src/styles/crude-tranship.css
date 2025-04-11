@@ -50,7 +50,7 @@ body {
   color: #1b4d65;
 }
 
-.content button {
+.content a {
   padding: 12px 28px;
   font-size: 14px;
   font-weight: 600;
@@ -62,7 +62,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.content button:hover {
+.content a:hover {
   background-color: #005b9a;
 }
 

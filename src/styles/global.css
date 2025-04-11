@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     text-rendering: optimizeSpeed;
     scroll-behavior: smooth;
@@ -12,10 +13,16 @@ body {
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
+
+    
 }
 body, html{
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+  }
+  
 
 img {
     transition: all 0.4s ease-in-out;

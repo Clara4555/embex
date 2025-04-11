@@ -44,28 +44,54 @@ function showTab(event, tabId) {
     document.getElementById(tabId).classList.add('active');
 }
 
-// Gallery slider
-const track = document.querySelector('.gallery-track');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
+// // Gallery slider
+// const track = document.querySelector('.gallery-track');
+// const prevButton = document.querySelector('.prev-button');
+// const nextButton = document.querySelector('.next-button');
 
-let index = 0;
-const slideWidth = document.querySelector('.gallery-slide').clientWidth;
-const totalSlides = track.children.length;
+// let index = 0;
+// const slideWidth = document.querySelector('.gallery-slide').clientWidth;
+// const totalSlides = track.children.length;
 
-function nextSlide() {
-    index = (index < totalSlides - 1) ? index + 1 : 0;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-}
+// function nextSlide() {
+//     index = (index < totalSlides - 1) ? index + 1 : 0;
+//     track.style.transform = `translateX(-${index * slideWidth}px)`;
+// }
 
-function prevSlide() {
-    index = (index > 0) ? index - 1 : totalSlides - 1;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-}
+// function prevSlide() {
+//     index = (index > 0) ? index - 1 : totalSlides - 1;
+//     track.style.transform = `translateX(-${index * slideWidth}px)`;
+// }
 
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
+// nextButton.addEventListener('click', nextSlide);
+// prevButton.addEventListener('click', prevSlide);
 
-let autoSlide = setInterval(nextSlide, 3000);
-track.addEventListener('mouseenter', () => clearInterval(autoSlide));
-track.addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 3000));
+// let autoSlide = setInterval(nextSlide, 3000);
+// track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+// track.addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 3000));
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+  
+    function updateSlidePosition() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+  
+    function moveToNextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlidePosition();
+    }
+  
+    // Auto slide every 3 seconds
+    setInterval(moveToNextSlide, 3000);
+  
+    // Handle window resizing
+    window.addEventListener("resize", updateSlidePosition);
+  
+    // Initial setup
+    updateSlidePosition();
+  });
+  

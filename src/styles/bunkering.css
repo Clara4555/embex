@@ -121,64 +121,83 @@ body {
 
 
 /* Slider Wrapper */
-.gallery-wrapper {
+
+
+/* Slides Track */
+/* Wrapper */
+.carousel-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #38a3ea;
+    padding: 60px 20px;
     position: relative;
-    background-color: #0074ccbb;
-    padding: 80px 170px;
-}
-
-/* Slider Container */
-.gallery-container {
     overflow: hidden;
+  }
+  
+  /* Container */
+  .carousel-container {
     width: 100%;
     max-width: 1100px;
-}
-
-/* Slides Track */
-.gallery-track {
+    overflow: hidden;
+  }
+  
+  /* Track */
+  .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-/* Each Slide */
-.gallery-slide {
+  }
+  
+  /* Slide */
+  .carousel-slide {
+    flex: 0 0 33.3333%;
     display: flex;
-    min-width: 100%;
-    justify-content: space-between;
-}
-
-/* Images */
-.gallery-slide img {
-    width: 32%;
-    border-radius: 8px;
-}
-
-/* Navigation Buttons */
-.nav-button {
-    background-color: rgba(0, 0, 0, 0.795);
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Image */
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Buttons */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000000cc;
     color: white;
     border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 19px;
-    z-index: 29;
     border-radius: 50%;
-    /* position: absolute; */
-    top: 50%;
-    margin-top: 50px;
-    transform: translateY(-50%);
-}
-
-.prev-button { margin-right: -15px; }
-.next-button { margin-left: -15px; }
-
-.nav-button:hover {
+    font-size: 24px;
+    padding: 10px 15px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .nav-button:hover {
     background-color: rgba(252, 6, 6, 0.904);
-}
-
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 100%;
+    }
+  }
+  
 .hero{
     background-color: #000000;
     padding: 30px;
@@ -214,7 +233,7 @@ body {
 /* Responsive Design */
 @media (max-width: 900px) {
     .gallery-slide img {
-        width: 48%;
+        width: 100%;
     }
 }
 
@@ -255,4 +274,5 @@ body {
     .growth-visual {
         padding: 15px;
     }
+    
 }
